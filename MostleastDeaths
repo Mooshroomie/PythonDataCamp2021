@@ -1,0 +1,25 @@
+import pandas as pd
+import matplotlib.pyplot as plt 
+
+df = pd.read_csv('database.csv')
+print(df.info())
+
+dlist = []
+llist = []
+for year in range(1980, 2015):
+  oneyear = df.loc[df['Year'] == year ]
+  deaths = oneyear["Victim Count"].sum()
+  dlist.append(deaths)
+  llist.append(deaths.min())
+
+
+mdeath = 0 
+for i in range (35):
+  if dlist[i] > mdeath:
+    mdeath = dlist[i]
+print(dlist.index(death)+1980,'had',mdeath,"deaths, Which is the maximum in our dataset ")
+ldeath = 1000000 
+for i in range (35):
+  if dlist[i] < ldeath:
+    ldeath = dlist[i]
+print(llist.index(ldeath)+1980,'had',ldeath,"deaths, Which is the minimum in our dataset ")
