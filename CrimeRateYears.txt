@@ -1,0 +1,2 @@
+1995 had 3872 deaths, Which is the maximum in our dataset 
+1998 had 1670 deaths, Which is the minimum in our dataset
